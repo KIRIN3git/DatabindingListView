@@ -1,0 +1,18 @@
+package jp.kirin3.databindinglistview
+
+import android.arch.lifecycle.LiveData
+import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.ViewModel
+
+class MainViewModel : ViewModel() {
+    private val _flag = MutableLiveData<Boolean>().apply {
+        value = false
+    }
+
+    val flag: LiveData<Boolean>
+        get() = _flag
+
+    fun toggle() {
+        _flag.postValue(!(flag.value ?: false))
+    }
+}

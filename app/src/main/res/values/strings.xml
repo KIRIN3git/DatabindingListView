@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DatabindingListView</string>
+    <string name="tukeru">つける</string>
+    <string name="kesu">けす</string>
+</resources>
